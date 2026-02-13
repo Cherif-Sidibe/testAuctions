@@ -1,0 +1,56 @@
+# ========================================
+# EXEMPLE 2 : PLUSIEURS JOBS
+# ========================================
+# Ce workflow montre comment utiliser plusieurs jobs
+# qui s'exécutent en PARALLÈLE (en même temps)
+
+name: 02 - Multi Jobs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Déclenchement manuel
+
+jobs:
+  # ================
+  # JOB 1 : Construction
+  # ================
+  construction:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Étape de construction
+        run: |
+          echo "🔨 Construction du projet..."
+          sleep 3  # Simule une construction de 3 secondes
+          echo "✅ Construction terminée !"
+
+  # ================
+  # JOB 2 : Tests
+  # ================
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Exécution des tests
+        run: |
+          echo "🧪 Lancement des tests..."
+          sleep 2  # Simule des tests
+          echo "✅ Tous les tests sont passés !"
+
+  # ================
+  # JOB 3 : Analyse de code
+  # ================
+  analyse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Analyse du code
+        run: |
+          echo "🔍 Analyse du code en cours..."
+          sleep 2
+          echo "✅ Aucun problème détecté !"
+
+# NOTE : Ces 3 jobs s'exécutent EN PARALLÈLE
+# Si vous voulez qu'un job attende qu'un autre soit fini,
+# utilisez "needs:" (voir l'exemple suivant)
