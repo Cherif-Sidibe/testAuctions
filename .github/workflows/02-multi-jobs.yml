@@ -21,9 +21,9 @@ jobs:
     steps:
       - name: Étape de construction
         run: |
-          echo "🔨 Construction du projet..."
+          echo " Construction du projet..."
           sleep 3  # Simule une construction de 3 secondes
-          echo "✅ Construction terminée !"
+          echo " Construction terminée !"
 
   # ================
   # JOB 2 : Tests
@@ -47,9 +47,9 @@ jobs:
     steps:
       - name: Analyse du code
         run: |
-          echo "🔍 Analyse du code en cours..."
+          echo " Analyse du code en cours..."
           sleep 2
-          echo "✅ Aucun problème détecté !"
+          echo " Aucun problème détecté !"
 
 # NOTE : Ces 3 jobs s'exécutent EN PARALLÈLE
 # Si vous voulez qu'un job attende qu'un autre soit fini,

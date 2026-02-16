@@ -31,20 +31,20 @@ jobs:
       # Étape 1 : Afficher un message simple
       - name: Afficher bonjour
         # La commande 'run' exécute des commandes shell
-        run: echo "👋 Bonjour depuis GitHub Actions !"
+        run: echo " Bonjour depuis GitHub Actions !"
 
       # Étape 2 : Afficher plusieurs informations
       - name: Afficher des informations système
         # Le symbole | permet d'écrire plusieurs lignes
         run: |
-          echo "📅 Date actuelle : $(date)"
-          echo "🖥️  Système : $(uname -s)"
-          echo "👤 Utilisateur : $(whoami)"
-          echo "📂 Dossier : $(pwd)"
+          echo " Date actuelle : $(date)"
+          echo " Système : $(uname -s)"
+          echo " Utilisateur : $(whoami)"
+          echo " Dossier : $(pwd)"
 
       # Étape 3 : Afficher des variables GitHub
       - name: Afficher des variables GitHub
         run: |
-          echo "📦 Dépôt : ${{ github.repository }}"
-          echo "🌿 Branche : ${{ github.ref }}"
-          echo "👨‍💻 Auteur : ${{ github.actor }}"
+          echo " Dépôt : ${{ github.repository }}"
+          echo " Branche : ${{ github.ref }}"
+          echo " Auteur : ${{ github.actor }}"

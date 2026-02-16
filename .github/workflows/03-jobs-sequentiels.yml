@@ -21,9 +21,9 @@ jobs:
     steps:
       - name: Préparer l'environnement
         run: |
-          echo "📋 Préparation de l'environnement..."
+          echo " Préparation de l'environnement..."
           sleep 2
-          echo "✅ Environnement prêt !"
+          echo " Environnement prêt !"
 
   # ================
   # ÉTAPE 2 : Construction
@@ -36,9 +36,9 @@ jobs:
     steps:
       - name: Construire le projet
         run: |
-          echo "🔨 Construction en cours..."
+          echo " Construction en cours..."
           sleep 3
-          echo "✅ Construction réussie !"
+          echo " Construction réussie !"
 
   # ================
   # ÉTAPE 3 : Tests
@@ -51,9 +51,9 @@ jobs:
     steps:
       - name: Exécuter les tests
         run: |
-          echo "🧪 Tests en cours..."
+          echo " Tests en cours..."
           sleep 2
-          echo "✅ Tests réussis !"
+          echo " Tests réussis !"
 
   # ================
   # ÉTAPE 4 : Déploiement
@@ -66,9 +66,9 @@ jobs:
     steps:
       - name: Déployer l'application
         run: |
-          echo "🚀 Déploiement en cours..."
+          echo " Déploiement en cours..."
           sleep 2
-          echo "✅ Déploiement réussi !"
+          echo " Déploiement réussi !"
 
 # ORDRE D'EXÉCUTION :
 # 1. preparation

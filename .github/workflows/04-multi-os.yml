@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Test sur Ubuntu
         run: |
-          echo "🐧 Test sur Linux Ubuntu"
+          echo " Test sur Linux Ubuntu"
           echo "Système : $(uname -s)"
           echo "Version : $(uname -r)"
 
@@ -35,7 +35,7 @@ jobs:
       - name: Test sur Windows
         # Sur Windows, on utilise PowerShell
         run: |
-          echo "🪟 Test sur Windows"
+          echo " Test sur Windows"
           echo "Système : $env:OS"
 
   # ================
@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Test sur MacOS
         run: |
-          echo "🍎 Test sur MacOS"
+          echo " Test sur MacOS"
           echo "Système : $(uname -s)"
 
   # ================
@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Test sur ${{ matrix.os }}
         run: |
-          echo "🔧 Test sur ${{ matrix.os }}"
+          echo " Test sur ${{ matrix.os }}"
           echo "Ceci s'exécute sur chaque OS !"
 
 # ASTUCE : La matrix strategy est plus efficace et facile à maintenir !
